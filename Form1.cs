@@ -28,6 +28,9 @@ namespace Timer
 
         public TimerForm()
         {
+            IconNote_IDL = new Icon("icon.ico");
+            IconNote_RUNNING = new Icon("icon.ico");
+            
             NotifyIcon = new NotifyIcon();
             NotifyIcon.Icon = IconNote_IDL;
             NotifyIcon.Visible = true;

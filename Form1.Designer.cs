@@ -53,23 +53,23 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.Total_Time = new System.Windows.Forms.TextBox();
-            this.SoundPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.SoundPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TimeHour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeMinValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeSecValue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoundPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoundPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonStart
             // 
             this.buttonStart.ContextMenuStrip = this.contextMenuStrip1;
-            this.buttonStart.Location = new System.Drawing.Point(9, 250);
+            this.buttonStart.Location = new System.Drawing.Point(6, 284);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(75, 45);
             this.buttonStart.TabIndex = 4;
@@ -126,7 +126,7 @@
             // progressBar1
             // 
             this.progressBar1.ContextMenuStrip = this.contextMenuStrip1;
-            this.progressBar1.Location = new System.Drawing.Point(9, 187);
+            this.progressBar1.Location = new System.Drawing.Point(6, 221);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(355, 23);
             this.progressBar1.Step = 1;
@@ -162,7 +162,7 @@
             // buttonPause
             // 
             this.buttonPause.ContextMenuStrip = this.contextMenuStrip1;
-            this.buttonPause.Location = new System.Drawing.Point(90, 250);
+            this.buttonPause.Location = new System.Drawing.Point(87, 284);
             this.buttonPause.Name = "buttonPause";
             this.buttonPause.Size = new System.Drawing.Size(75, 45);
             this.buttonPause.TabIndex = 5;
@@ -173,7 +173,7 @@
             // buttonStop
             // 
             this.buttonStop.ContextMenuStrip = this.contextMenuStrip1;
-            this.buttonStop.Location = new System.Drawing.Point(171, 250);
+            this.buttonStop.Location = new System.Drawing.Point(168, 284);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(75, 45);
             this.buttonStop.TabIndex = 6;
@@ -259,22 +259,22 @@
             // button1
             // 
             this.button1.ContextMenuStrip = this.contextMenuStrip1;
-            this.button1.Location = new System.Drawing.Point(309, 255);
+            this.button1.Location = new System.Drawing.Point(306, 289);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(61, 36);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Define Audio";
+            this.button1.Text = "Change Sound";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.ContextMenuStrip = this.contextMenuStrip1;
-            this.button2.Location = new System.Drawing.Point(309, 216);
+            this.button2.Location = new System.Drawing.Point(306, 250);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(61, 35);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Default Sounds";
+            this.button2.Text = "Default Sound";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -291,17 +291,6 @@
             this.Total_Time.TabIndex = 9999;
             this.Total_Time.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // SoundPlayer
-            // 
-            this.SoundPlayer.ContextMenuStrip = this.contextMenuStrip1;
-            this.SoundPlayer.Enabled = true;
-            this.SoundPlayer.Location = new System.Drawing.Point(63, 216);
-            this.SoundPlayer.Name = "SoundPlayer";
-            this.SoundPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("SoundPlayer.OcxState")));
-            this.SoundPlayer.Size = new System.Drawing.Size(237, 34);
-            this.SoundPlayer.TabIndex = 0;
-            this.SoundPlayer.Visible = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -310,6 +299,17 @@
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 10000;
             this.label1.Text = "CurrentSound";
+            // 
+            // SoundPlayer
+            // 
+            this.SoundPlayer.ContextMenuStrip = this.contextMenuStrip1;
+            this.SoundPlayer.Enabled = true;
+            this.SoundPlayer.Location = new System.Drawing.Point(60, 250);
+            this.SoundPlayer.Name = "SoundPlayer";
+            this.SoundPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("SoundPlayer.OcxState")));
+            this.SoundPlayer.Size = new System.Drawing.Size(237, 34);
+            this.SoundPlayer.TabIndex = 0;
+            this.SoundPlayer.Visible = false;
             // 
             // TimerForm
             // 
@@ -334,6 +334,7 @@
             this.Controls.Add(this.TimeMin);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.buttonStart);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(395, 376);
             this.MinimumSize = new System.Drawing.Size(395, 376);
@@ -345,9 +346,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.TimeHour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeMinValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeSecValue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoundPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoundPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
