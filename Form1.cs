@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Timer
@@ -43,7 +44,8 @@ namespace Timer
 
             openFileDialog1.Filter = "Meida Files|*.mp3;*.wav;*.mp4;*.mov*.wmv;*.mpg;|All Files|*.*";
             openFileDialog1.InitialDirectory = Environment.CurrentDirectory;
-            AudioFile = Environment.CurrentDirectory + @"\alarm_sound.wav";
+            AudioFile = Environment.CurrentDirectory + @"\Cat_Purring.wav";
+            label1.Text = "Son: "+Path.GetFileName(AudioFile);
 
         }
 

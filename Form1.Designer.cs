@@ -55,12 +55,15 @@
             this.Total_Time = new System.Windows.Forms.TextBox();
             this.SoundPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TimeHour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeMinValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeSecValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonStart
@@ -299,12 +302,22 @@
             this.SoundPlayer.TabIndex = 0;
             this.SoundPlayer.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(133, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 10000;
+            this.label1.Text = "CurrentSound";
+            // 
             // TimerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 337);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.SoundPlayer);
@@ -334,6 +347,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TimeSecValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,6 +380,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.TextBox Total_Time;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource bindingSource2;
     }
 }
 
