@@ -218,6 +218,7 @@ namespace Timer
 
             SoundPlayer.URL = AudioFile;
             SoundPlayer.Ctlcontrols.play();
+            SoundPlayer.settings.setMode("Loop", true);
 
             NotifyIcon.Icon = IconNote_IDL;
             NotifyIcon.Visible = true;
@@ -225,9 +226,12 @@ namespace Timer
             NotifyIcon.BalloonTipText = "Dev ça se fait pas tout seul!";
             NotifyIcon.ShowBalloonTip(2000);
 
-            MessageBox.Show("Au boulot!");
+            if (MessageBox.Show("Au boulot!") == DialogResult.OK)
+            {
+                SoundPlayer.Ctlcontrols.stop();
+            }
 
-            SoundPlayer.Ctlcontrols.pause();
+            
 
             timer1.Stop();
             timer1.Enabled = false;
