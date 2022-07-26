@@ -189,7 +189,7 @@ namespace Timer
             timer1.Stop();
             TimeDone_FINISHED = 0;
             progressBar1.Value = 0;
-            MessageBox.Show("Pourquoi t'as stopper :o !");
+            MessageBox.Show("Pourquoi t'as stoppé :o !");
             TimeVarEDIT = 0;
             TimeVar = 0;
             return;
