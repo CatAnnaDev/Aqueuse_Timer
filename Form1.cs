@@ -1,8 +1,13 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
+using System.Runtime.InteropServices;
+using System.Threading;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ProgressBar = System.Windows.Forms.ProgressBar;
 
 namespace Timer
 {
@@ -22,7 +27,6 @@ namespace Timer
         NotifyIcon NotifyIcon;
         Icon IconNote_IDL;
         Icon IconNote_RUNNING;
-
 
         #endregion
 
@@ -51,11 +55,11 @@ namespace Timer
             label1.Text = "Son: "+Path.GetFileName(AudioFile);
 
         }
-
-
+        
         #region Setup of all of the Buttons and Actions
         private void TimerForm_Load(object sender, EventArgs e)
         {
+            
 
         }
 
@@ -310,9 +314,6 @@ namespace Timer
 
             return;
         }
-
-
-
 
         #endregion
 

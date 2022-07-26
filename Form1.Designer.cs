@@ -37,7 +37,6 @@
             this.Menu_StopTimer = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.TimeMin = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.TimeSec = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.SoundPlayer = new AxWMPLib.AxWindowsMediaPlayer();
+            this.progressBar1 = new Timer.ProgressBarEx();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TimeHour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeMinValue)).BeginInit();
@@ -123,15 +123,6 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(264, 22);
             this.toolStripMenuItem1.Text = "Program Created By: Noah Halstead";
             // 
-            // progressBar1
-            // 
-            this.progressBar1.ContextMenuStrip = this.contextMenuStrip1;
-            this.progressBar1.Location = new System.Drawing.Point(6, 221);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(355, 23);
-            this.progressBar1.Step = 1;
-            this.progressBar1.TabIndex = 0;
-            // 
             // TimeMin
             // 
             this.TimeMin.AutoSize = true;
@@ -186,11 +177,11 @@
             this.TimeRemaining.BackColor = System.Drawing.SystemColors.Control;
             this.TimeRemaining.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TimeRemaining.ContextMenuStrip = this.contextMenuStrip1;
-            this.TimeRemaining.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeRemaining.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TimeRemaining.Location = new System.Drawing.Point(9, 141);
             this.TimeRemaining.Name = "TimeRemaining";
             this.TimeRemaining.ReadOnly = true;
-            this.TimeRemaining.Size = new System.Drawing.Size(355, 13);
+            this.TimeRemaining.Size = new System.Drawing.Size(355, 16);
             this.TimeRemaining.TabIndex = 9999;
             this.TimeRemaining.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -311,6 +302,16 @@
             this.SoundPlayer.TabIndex = 0;
             this.SoundPlayer.Visible = false;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.ContextMenuStrip = this.contextMenuStrip1;
+            this.progressBar1.ForeColor = System.Drawing.Color.Fuchsia;
+            this.progressBar1.Location = new System.Drawing.Point(6, 221);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(361, 23);
+            this.progressBar1.Step = 1;
+            this.progressBar1.TabIndex = 0;
+            // 
             // TimerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,7 +335,9 @@
             this.Controls.Add(this.TimeMin);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.buttonStart);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(395, 376);
             this.MinimumSize = new System.Drawing.Size(395, 376);
@@ -357,7 +360,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private ProgressBarEx progressBar1;
         private System.Windows.Forms.Label TimeMin;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label TimeSec;
