@@ -52,18 +52,20 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.Total_Time = new System.Windows.Forms.TextBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.SoundPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.progressBar1 = new Timer.ProgressBarEx();
+            this.SoundPlayer = new AxWMPLib.AxWindowsMediaPlayer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TimeHour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeMinValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeSecValue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoundPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoundPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonStart
@@ -291,6 +293,16 @@
             this.label1.TabIndex = 10000;
             this.label1.Text = "CurrentSound";
             // 
+            // progressBar1
+            // 
+            this.progressBar1.ContextMenuStrip = this.contextMenuStrip1;
+            this.progressBar1.ForeColor = System.Drawing.Color.Fuchsia;
+            this.progressBar1.Location = new System.Drawing.Point(9, 221);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(358, 23);
+            this.progressBar1.Step = 1;
+            this.progressBar1.TabIndex = 0;
+            // 
             // SoundPlayer
             // 
             this.SoundPlayer.ContextMenuStrip = this.contextMenuStrip1;
@@ -302,15 +314,17 @@
             this.SoundPlayer.TabIndex = 0;
             this.SoundPlayer.Visible = false;
             // 
-            // progressBar1
+            // pictureBox1
             // 
-            this.progressBar1.ContextMenuStrip = this.contextMenuStrip1;
-            this.progressBar1.ForeColor = System.Drawing.Color.Fuchsia;
-            this.progressBar1.Location = new System.Drawing.Point(6, 221);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(361, 23);
-            this.progressBar1.Step = 1;
-            this.progressBar1.TabIndex = 0;
+            this.pictureBox1.Image = global::Timer.Properties.Resources.big_sleep;
+            this.pictureBox1.InitialImage = global::Timer.Properties.Resources.big_sleep;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(358, 176);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10001;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.WaitOnLoad = true;
             // 
             // TimerForm
             // 
@@ -318,6 +332,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 337);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -349,9 +364,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.TimeHour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeMinValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeSecValue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoundPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoundPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,6 +402,7 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource bindingSource2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

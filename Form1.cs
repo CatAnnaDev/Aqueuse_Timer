@@ -32,9 +32,10 @@ namespace Timer
 
         public TimerForm()
         {
-            IconNote_IDL = new Icon("icon.ico");
-            IconNote_RUNNING = new Icon("icon.ico");
-            
+            this.Icon = Properties.Resources.icon;
+            IconNote_IDL = Properties.Resources.icon;
+            IconNote_RUNNING = Properties.Resources.icon;
+
             NotifyIcon = new NotifyIcon();
             NotifyIcon.Icon = IconNote_IDL;
             NotifyIcon.Visible = true;
@@ -186,10 +187,12 @@ namespace Timer
             Menu_PauseTimer.Enabled = false;
             Menu_StartTimer.Enabled = true;
 
+            pictureBox1.Visible = true;
+
             timer1.Stop();
             TimeDone_FINISHED = 0;
             progressBar1.Value = 0;
-            MessageBox.Show("Pourquoi t'as stoppé :o !");
+            MessageBox.Show("Pourquoi t'as stoppé :o !\nSad cat :'(");
             TimeVarEDIT = 0;
             TimeVar = 0;
             return;
@@ -230,6 +233,8 @@ namespace Timer
             NotifyIcon.BalloonTipText = "Dev ça se fait pas tout seul!";
             NotifyIcon.ShowBalloonTip(2000);
 
+            pictureBox1.Visible = true;
+
             if (MessageBox.Show("Au boulot!") == DialogResult.OK)
             {
                 SoundPlayer.Ctlcontrols.stop();
@@ -244,7 +249,8 @@ namespace Timer
 
         private void StartTime()
         {
-            if(TimeHour.Text == string.Empty)
+            pictureBox1.Visible = false;
+            if (TimeHour.Text == string.Empty)
             {
                 TimeHour.Text = "0";
             }
